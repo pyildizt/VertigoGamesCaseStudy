@@ -104,3 +104,10 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Visual Studio & VSCode
+.vscode
+.vsconfig
+
+# macOS
+.DS_Store
