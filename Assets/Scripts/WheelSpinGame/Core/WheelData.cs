@@ -18,8 +18,21 @@ namespace WheelSpinGame
         [SerializeField] private ZoneType _zoneType;
         [SerializeField] private WheelSliceData[] _wheelSlices = new WheelSliceData[wheelSliceCount];
 
+        public int ZoneNumber { get { return _zoneNumber; } }
         public ZoneType ZoneType { get { return _zoneType; } }
         public WheelSliceData[] WheelSlices { get { return _wheelSlices; } }
+
+        public WheelData(int zoneNumber, ZoneType zoneType)
+        {
+            _zoneNumber = zoneNumber;
+            _zoneType = zoneType;
+            _wheelSlices = new WheelSliceData[wheelSliceCount];
+        }
+
+        public void SetWheelSlice(int index, WheelSliceData slice)
+        {
+            _wheelSlices[index] = slice;
+        }
 
         /// <summary>
         /// Make sure there are always _wheelSliceCount number of slices.

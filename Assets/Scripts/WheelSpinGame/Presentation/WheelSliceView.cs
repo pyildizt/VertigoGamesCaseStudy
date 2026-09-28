@@ -13,20 +13,17 @@ namespace WheelSpinGame
 
         public void SetData(WheelSliceData data)
         {
+            icon.sprite = data.IconSprite;
             if (data.SliceType == SliceType.Reward)
             {
                 icon.rectTransform.localPosition = rewardPosition;
                 icon.rectTransform.localScale = Vector3.one;
-
-                icon.sprite = data.IconSprite;
                 count.text = 'x' + data.Count.ToString();
             }
             else
             {
                 icon.rectTransform.localPosition = Vector3.zero;
                 icon.rectTransform.localScale = Vector3.one * bombScale;
-
-                icon.sprite = data.IconSprite;
                 count.text = "";
             }            
         }

@@ -1,5 +1,4 @@
 using DG.Tweening;
-using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,7 +19,6 @@ namespace WheelSpinGame
         public Color goldColor;
     }
 
-    [RequireComponent(typeof(RectTransform))]
     public class WheelView : MonoBehaviour
     {
         [SerializeField] private RectTransform _rectTransform;
@@ -33,10 +31,12 @@ namespace WheelSpinGame
         [Header("Wheel Slices")]
         [SerializeField] private CanvasGroup _sliceCanvasGroup;
         [SerializeField] private WheelSliceView[] _sliceViews;
+        [Header("Wheel Spin Animation")]
+        [SerializeField] private AnimationCurve wheelSpinCurve;
+
         public WheelSliceView[] SliceViews { get { return _sliceViews; } }
 
-
-        private readonly bool _enableRandomOffset = false;
+        private readonly bool _enableRandomOffset = true;
 
         private void DisplayWheelType(ZoneType zoneType)
         {
@@ -75,33 +75,37 @@ namespace WheelSpinGame
             {
                 _sliceViews[i].SetData(wheelData.WheelSlices[i]);
             }
+            ResetWheelRotation();
         }
 
         public Tween AnimateWheelSpin(int sliceIndex)
         {
             int turnCount = 3;
-            float turnDurationSeconds = 1f;
-            
-            // Get current anlge and rotate from that
-            float currentAngle = _rectTransform.localEulerAngles.z;
+            float turnDurationSeconds = 2f;
+
+            // Reset wheel angle
+            ResetWheelRotation();
 
             float totalTurns = turnCount + (sliceIndex / (float)WheelData.wheelSliceCount);
             float sliceAngle = sliceIndex * (360f / WheelData.wheelSliceCount);
 
-            float shortestAngleToSlice = Mathf.DeltaAngle(currentAngle, sliceAngle);
-
             // Calculate total rotation and duration
-            float totalRotation = (360f * turnCount) + shortestAngleToSlice;
+            float totalRotation = 360f * turnCount + sliceAngle;
             float totalDuration = turnDurationSeconds * totalTurns;
 
             // If enabled, add random offset to make it look more natural
-            if(_enableRandomOffset)
+            if (_enableRandomOffset)
             {
                 float maxRandomOffset = 15f;
                 totalRotation += Random.Range(-maxRandomOffset, maxRandomOffset);
             }
 
-            return _rectTransform.DORotate(new Vector3(0, 0, totalRotation), totalDuration, RotateMode.FastBeyond360).SetEase(Ease.InOutSine);
+            return _rectTransform.DORotate(new Vector3(0, 0, totalRotation), totalDuration, RotateMode.FastBeyond360).SetEase(wheelSpinCurve); //.SetEase(Ease.InOutSine);
+        }
+
+        public void ResetWheelRotation()
+        {
+            _rectTransform.localRotation = Quaternion.identity;
         }
 
         //public IEnumerator DisplayWheelCoroutine(WheelData wheelData)

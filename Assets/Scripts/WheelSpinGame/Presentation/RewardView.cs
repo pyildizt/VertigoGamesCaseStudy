@@ -1,5 +1,4 @@
 using DG.Tweening;
-using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,10 +38,14 @@ namespace WheelSpinGame
             return popSequence;
         }
 
-        public IEnumerator MoveRewardCoroutine()
+        public Tween MoveReward()
         {
-            yield return _rewardRootTransform.DOScale(Vector3.zero, 1f).SetEase(Ease.InOutBack).WaitForCompletion();
-            _rewardRootTransform.gameObject.SetActive(false);
+            return _rewardRootTransform.DOScale(Vector3.zero, 1f).SetEase(Ease.InOutBack);
+        }
+
+        public void SetActive(bool val)
+        {
+            _rewardRootTransform.gameObject.SetActive(val);
         }
     }
 }

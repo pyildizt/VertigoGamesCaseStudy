@@ -6,23 +6,22 @@ namespace WheelSpinGame
     [CustomEditor(typeof(WheelGameConfig))]
     public class WheelGameConfigEditor : Editor
     {
-        private const string WheelSlicesFolder = "Assets/ScriptableObjects/WheelSpinGame/WheelSlices";
+        private const string RewardDataFolder = "Assets/ScriptableObjects/WheelSpinGame/Rewards";
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
 
             EditorGUILayout.Space();
 
-            if (GUILayout.Button("Generate Reward WheelSlices"))
+            if (GUILayout.Button("Generate Reward Data"))
             {
-                GenerateRewardWheelSlices();
+                GenerateRewardData();
             }
         }
 
-        private void GenerateRewardWheelSlices()
+        private void GenerateRewardData()
         {
-            //WheelGameConfig config = (WheelGameConfig)target;
-            SerializedProperty rewardSprites = serializedObject.FindProperty("rewardSprites");
+            SerializedProperty rewardSprites = serializedObject.FindProperty("_rewardSprites");
 
             for (int i = 0; i < rewardSprites.arraySize; i++)
             {
@@ -30,16 +29,15 @@ namespace WheelSpinGame
                 if (sprite == null)
                     continue;
 
-                string assetPath = $"{WheelSlicesFolder}/WheelSlice_{sprite.name}.asset";
-                if (AssetDatabase.LoadAssetAtPath<WheelSlice>(assetPath) != null)
+                string assetPath = $"{RewardDataFolder}/Reward_{sprite.name}.asset";
+                if (AssetDatabase.LoadAssetAtPath<RewardData>(assetPath) != null)
                     continue;
 
-                WheelSlice wheelSlice = CreateInstance<WheelSlice>();
-                wheelSlice.name = $"WheelSlice_{sprite.name}";
-                wheelSlice.sliceType = SliceType.Reward;
-                wheelSlice.iconSprite = sprite;
+                RewardData rewardData = CreateInstance<RewardData>();
+                rewardData.name = $"Reward_{sprite.name}";
+                rewardData.SetDefaultValues(sprite);
 
-                AssetDatabase.CreateAsset(wheelSlice, assetPath);
+                AssetDatabase.CreateAsset(rewardData, assetPath);
             }
 
             AssetDatabase.SaveAssets();
