@@ -14,8 +14,6 @@ namespace WheelSpinGame
         public RectTransform RectTransform {  get { return _rectTransform; } }
         public RectTransform ImageRectTransform { get { return _imageRectTransform; } }
 
-        // From 100x100 pixels to 115x115 pixels. Or 1x scale to 1.15x scale.
-
         public void SetZone(int zoneNumber, Sprite zoneSprite, Color color)
         {
             _zoneNumberText.text = zoneNumber.ToString();

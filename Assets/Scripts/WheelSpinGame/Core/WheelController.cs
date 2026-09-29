@@ -22,7 +22,6 @@ namespace WheelSpinGame
             }
 
             randomSliceIndex = Random.Range(0, wheelData.WheelSlices.Length);
-            Debug.Log($"Chosen: slice {randomSliceIndex}: {wheelData.WheelSlices[randomSliceIndex].Count}");
             return wheelData.WheelSlices[randomSliceIndex];
         }
     }

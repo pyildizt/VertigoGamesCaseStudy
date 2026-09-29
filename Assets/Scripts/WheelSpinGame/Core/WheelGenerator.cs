@@ -43,7 +43,6 @@ namespace WheelSpinGame
                         break;
                 }
             }
-            //Debug.Log($"low: {_lowTierRewards.Count}, mid: {_midTierRewards.Count}, high: {_highTierRewards.Count}");
         }
 
         public List<WheelData> GenerateWheels()

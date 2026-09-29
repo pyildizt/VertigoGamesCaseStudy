@@ -1,5 +1,5 @@
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace WheelSpinGame
 {
@@ -16,6 +16,15 @@ namespace WheelSpinGame
             if (GUILayout.Button("Generate Reward Data"))
             {
                 GenerateRewardData();
+            }
+
+            WheelGameConfig config = (WheelGameConfig)target;
+            if (GUILayout.Button("Generate Random Wheels"))
+            {
+                config.GenerateWheelPreview();
+
+                EditorUtility.SetDirty(config);
+                AssetDatabase.SaveAssets();
             }
         }
 

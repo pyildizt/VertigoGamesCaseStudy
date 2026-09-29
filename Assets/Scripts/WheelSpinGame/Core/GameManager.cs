@@ -10,10 +10,6 @@ namespace WheelSpinGame
         private ZoneManager _zoneManager;
         private PrizeManager _prizeManager;
         private WheelController _wheelController;
-        private bool _isProcessing;
-
-        public PrizeManager PrizeManager => _prizeManager;
-        public WheelController WheelController => _wheelController;
 
         private void Awake()
         {
@@ -27,8 +23,6 @@ namespace WheelSpinGame
             _prizeManager = new PrizeManager();
 
             _uiController.Initialize(this, _zoneManager.GetCurrWheel(), _wheelGameConfig.NumberOfZones);
-
-            _isProcessing = false;
         }
 
         public void OnSpinButtonClicked()
@@ -41,8 +35,6 @@ namespace WheelSpinGame
 
         private IEnumerator HandleSpinCoroutine(WheelSliceData resultSlice, int sliceIndex)
         {
-            _isProcessing = true;
-
             _uiController.SetSpinButtonInteractable(false);
             _uiController.SetExitButtonInteractable(false);
 
@@ -60,9 +52,10 @@ namespace WheelSpinGame
                 // Move to next zone
                 _zoneManager.MoveToNextZone();
                 yield return _uiController.MoveToZone(_zoneManager.CurrZoneNumber);
-                if (_zoneManager.CurrZoneNumber == _wheelGameConfig.NumberOfZones)
+                if (_zoneManager.CurrZoneNumber >= _wheelGameConfig.NumberOfZones)
                 {
-                    // TODO: END GAME!
+                    // Show collected rewards and end game
+                    OnCollectRewardsButtonClicked();
                     yield break;
                 }
 
@@ -115,8 +108,14 @@ namespace WheelSpinGame
         public void OnCollectRewardsButtonClicked()
         {
             _uiController.DisplayExitPanel(false);
-            //TODO:
-            Debug.Log("need code for collect rewards");
+            _uiController.DisplayCollectedRewardsPanel(true);
+            _uiController.DisplayCollectedRewards(_prizeManager.Prizes);
+        }
+
+        public void OnPlayAgainButtonClicked()
+        {
+            _uiController.DisplayCollectedRewardsPanel(false);
+            OnGiveUpButtonClicked();
         }
 
     }

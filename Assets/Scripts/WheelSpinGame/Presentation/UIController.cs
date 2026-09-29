@@ -16,6 +16,7 @@ namespace WheelSpinGame
         [SerializeField] private PrizesView _prizesView;
         [SerializeField] private ExitView _exitView;
         [SerializeField] private ZoneListView _zoneListView;
+        [SerializeField] private CollectedRewardsView _collectedRewardsView;
         [Header("Buttons")]
         [SerializeField] private Button _spinButton;
         [SerializeField] private Button _exitButton;
@@ -23,6 +24,7 @@ namespace WheelSpinGame
         [SerializeField] private Button _reviveButton;
         [SerializeField] private Button _goBackButton;
         [SerializeField] private Button _collectRewardsButton;
+        [SerializeField] private Button _playAgainButton;
 
         public void Initialize(GameManager gameManager, WheelData wheelData, int numberOfZones)
         {
@@ -35,6 +37,7 @@ namespace WheelSpinGame
             _reviveButton.onClick.AddListener(gameManager.OnReviveButtonClicked);
             _goBackButton.onClick.AddListener(gameManager.OnGoBackButtonClicked);
             _collectRewardsButton.onClick.AddListener(gameManager.OnCollectRewardsButtonClicked);
+            _playAgainButton.onClick.AddListener(gameManager.OnPlayAgainButtonClicked);
         }
 
         public IEnumerator AnimateWheelSpin(int sliceIndex)
@@ -72,9 +75,20 @@ namespace WheelSpinGame
         {
             _deathView.DisplayDeathPanel(val);
         }
+
         public void DisplayExitPanel(bool val)
         {
             _exitView.DisplayExitPanel(val);
+        }
+
+        public void DisplayCollectedRewardsPanel(bool val)
+        {
+            _collectedRewardsView.DisplayCollectedRewardsPanel(val);
+        }
+
+        public void DisplayCollectedRewards(List<PrizeData> prizes)
+        {
+            _collectedRewardsView.DisplayRewards(prizes);
         }
 
         public void DisplayPrizes(List<PrizeData> prizes)

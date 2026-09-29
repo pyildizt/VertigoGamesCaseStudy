@@ -63,7 +63,7 @@ namespace WheelSpinGame
                     _spinIndicator.sprite = _wheelVisuals.goldSpinIndicator;
                     _spinTitle.text = "GOLDEN SPIN";
                     _spinTitle.color = _wheelVisuals.goldColor;
-                    _spinInfo.text = "Up To x10 Rewards";
+                    _spinInfo.text = "Super Spin";
                     _spinInfo.color = _wheelVisuals.goldColor;
                     break;
             }

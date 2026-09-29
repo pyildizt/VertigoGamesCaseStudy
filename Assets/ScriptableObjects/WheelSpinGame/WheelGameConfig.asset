@@ -53,20 +53,24 @@ MonoBehaviour:
   _rewardData:
   - {fileID: 11400000, guid: a643294378c925748ae853e78ad490ca, type: 2}
   - {fileID: 11400000, guid: 7fa6af070c224b94bb818a2bbd7dc467, type: 2}
+  - {fileID: 11400000, guid: 7b96cb0794f03fd478fd383d85af7c28, type: 2}
+  - {fileID: 11400000, guid: b6ad5cd0f810fdd4e8c7924a3a69a042, type: 2}
+  - {fileID: 11400000, guid: 34a348d54eede3e4681706e9f59d9ac0, type: 2}
+  - {fileID: 11400000, guid: ad119a823ad5d344e9ce3d015a7c3ade, type: 2}
+  - {fileID: 11400000, guid: ed8f90cca187a17448aa61108a81c140, type: 2}
+  - {fileID: 11400000, guid: ed2f7a9d13a189441999c911ad1f2172, type: 2}
   - {fileID: 11400000, guid: c6e579b936afa3b42aa0276794b4c68b, type: 2}
   - {fileID: 11400000, guid: 4f9e17023589a2449ba4ec4828455aea, type: 2}
   - {fileID: 11400000, guid: 7e439954e114b474d87ddd7d556e02fd, type: 2}
   - {fileID: 11400000, guid: 9cc31231525f20047a082d5876f59f87, type: 2}
   - {fileID: 11400000, guid: 804984f40945d954ba36c27616c79a15, type: 2}
   - {fileID: 11400000, guid: 3d9c36e4ab76e2349a5421388f6d14cb, type: 2}
-  - {fileID: 11400000, guid: ad119a823ad5d344e9ce3d015a7c3ade, type: 2}
   - {fileID: 11400000, guid: e1801cd0b73cc4d4b9f8f2dfb72bfea2, type: 2}
   - {fileID: 11400000, guid: fce0d641bd33b304d93da7472dadd644, type: 2}
   - {fileID: 11400000, guid: 8920c307ee03318449913452f7c3f7fd, type: 2}
   - {fileID: 11400000, guid: 7c2256d18a95c754686b2f3f57f3da24, type: 2}
   - {fileID: 11400000, guid: 068fe077872823746af3ac8b79dc95b4, type: 2}
   - {fileID: 11400000, guid: 849bee297253b4b47929c07764a42eb3, type: 2}
-  - {fileID: 11400000, guid: 34a348d54eede3e4681706e9f59d9ac0, type: 2}
   - {fileID: 11400000, guid: 7a0a59397cbc8c143aae16df80aeb093, type: 2}
   - {fileID: 11400000, guid: 54a0117364832024391e1d5561ca172a, type: 2}
   - {fileID: 11400000, guid: fbd223564eeecd840b92544ae15c22ca, type: 2}
@@ -76,17 +80,769 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eaa7e214dd2b76849b44579eeeb52fb0, type: 2}
   - {fileID: 11400000, guid: 0f885cfa269fbf340af3bea6e907eed9, type: 2}
   - {fileID: 11400000, guid: bb910ee8c2781f2409e464fe69d6129d, type: 2}
-  - {fileID: 11400000, guid: b6ad5cd0f810fdd4e8c7924a3a69a042, type: 2}
-  - {fileID: 11400000, guid: ed8f90cca187a17448aa61108a81c140, type: 2}
   - {fileID: 11400000, guid: 2c2ff8d61d4ec4f448281dffa2be755f, type: 2}
   - {fileID: 11400000, guid: a4d662ab959e9dd4c867d8d1453cca38, type: 2}
   - {fileID: 11400000, guid: 90e0ab978e5ab6d4f8cc2f7c05a604ca, type: 2}
   - {fileID: 11400000, guid: af0a2c67d91dd5542a883e5349ce25ae, type: 2}
-  - {fileID: 11400000, guid: 7b96cb0794f03fd478fd383d85af7c28, type: 2}
   - {fileID: 11400000, guid: d88dcff621738f74f8029f992d2f0108, type: 2}
   - {fileID: 11400000, guid: c5e64345f90cf284bbeb93f231c4804d, type: 2}
-  - {fileID: 11400000, guid: ed2f7a9d13a189441999c911ad1f2172, type: 2}
   _wheelOverrides:
+  - _zoneNumber: 1
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 120
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 400
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 215
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 60
+  - _zoneNumber: 2
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 400
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 608
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 150
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 2
+  - _zoneNumber: 3
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 988
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 849
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 4
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 5
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 3
+  - _zoneNumber: 4
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 5
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: af2704e0a3b97fd4692e3a929f63fa57, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 250
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 5
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 180
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d77c15ad25ae14a49ae33d949de5d1ae, type: 3}
+      _count: 3
+  - _zoneNumber: 5
+    _zoneType: 1
+    _wheelSlices:
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 130
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 5
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 250
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 7d8f10453546ea1499c2636c0eeba449, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 280
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 5
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 3
+  - _zoneNumber: 6
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 9
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 10
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 86
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 9
+  - _zoneNumber: 7
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 7d8f10453546ea1499c2636c0eeba449, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f57b1525c8dc6184985675fd32f53ae6, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f57b1525c8dc6184985675fd32f53ae6, type: 3}
+      _count: 2
+  - _zoneNumber: 8
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 4
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 948
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f57b1525c8dc6184985675fd32f53ae6, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 3
+  - _zoneNumber: 9
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 7
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 7
+  - _zoneNumber: 10
+    _zoneType: 1
+    _wheelSlices:
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 7d8f10453546ea1499c2636c0eeba449, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: af2704e0a3b97fd4692e3a929f63fa57, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 15
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 7d8f10453546ea1499c2636c0eeba449, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 6
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 5
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 1
+  - _zoneNumber: 11
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 583
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: c8deacf9f17be1944a13da3063d23459, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 7d8f10453546ea1499c2636c0eeba449, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: af2704e0a3b97fd4692e3a929f63fa57, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 6
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 3
+  - _zoneNumber: 12
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 821c35546745a454c9ec5373aece6fca, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 4
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f57b1525c8dc6184985675fd32f53ae6, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: c8deacf9f17be1944a13da3063d23459, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 7d8f10453546ea1499c2636c0eeba449, type: 3}
+      _count: 1
+  - _zoneNumber: 13
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 821c35546745a454c9ec5373aece6fca, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 8
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 8
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d77c15ad25ae14a49ae33d949de5d1ae, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: af2704e0a3b97fd4692e3a929f63fa57, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 1
+  - _zoneNumber: 14
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: af2704e0a3b97fd4692e3a929f63fa57, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4d8d21265f85aa143b85d72f70e5acf8, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 6
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: c8deacf9f17be1944a13da3063d23459, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 29d22b4c211e6214daec2bc150051360, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f57b1525c8dc6184985675fd32f53ae6, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f57b1525c8dc6184985675fd32f53ae6, type: 3}
+      _count: 3
+  - _zoneNumber: 15
+    _zoneType: 1
+    _wheelSlices:
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: c8deacf9f17be1944a13da3063d23459, type: 3}
+      _count: 5
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d77c15ad25ae14a49ae33d949de5d1ae, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 7
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 29d22b4c211e6214daec2bc150051360, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 7d8f10453546ea1499c2636c0eeba449, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d77c15ad25ae14a49ae33d949de5d1ae, type: 3}
+      _count: 3
+  - _zoneNumber: 16
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 2f7c1b486c0088b4799c846319b266fa, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 821c35546745a454c9ec5373aece6fca, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f57b1525c8dc6184985675fd32f53ae6, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d77c15ad25ae14a49ae33d949de5d1ae, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d77c15ad25ae14a49ae33d949de5d1ae, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: c8deacf9f17be1944a13da3063d23459, type: 3}
+      _count: 3
+  - _zoneNumber: 17
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: af2704e0a3b97fd4692e3a929f63fa57, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 6
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d77c15ad25ae14a49ae33d949de5d1ae, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 4
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 49
+  - _zoneNumber: 18
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: af2704e0a3b97fd4692e3a929f63fa57, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d8ba2ad079c16414fa9b5750c5faf09a, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d8ba2ad079c16414fa9b5750c5faf09a, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 7d8f10453546ea1499c2636c0eeba449, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 81
+  - _zoneNumber: 19
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 2f7c1b486c0088b4799c846319b266fa, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 760
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 7d8f10453546ea1499c2636c0eeba449, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4d8d21265f85aa143b85d72f70e5acf8, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d77c15ad25ae14a49ae33d949de5d1ae, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d77c15ad25ae14a49ae33d949de5d1ae, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 123
+  - _zoneNumber: 20
+    _zoneType: 1
+    _wheelSlices:
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: c8deacf9f17be1944a13da3063d23459, type: 3}
+      _count: 4
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 5
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 6
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 895
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: c8deacf9f17be1944a13da3063d23459, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 2f7c1b486c0088b4799c846319b266fa, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 2
+  - _zoneNumber: 21
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d77c15ad25ae14a49ae33d949de5d1ae, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4d8d21265f85aa143b85d72f70e5acf8, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 821c35546745a454c9ec5373aece6fca, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f57b1525c8dc6184985675fd32f53ae6, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d77c15ad25ae14a49ae33d949de5d1ae, type: 3}
+      _count: 1
+  - _zoneNumber: 22
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: c8deacf9f17be1944a13da3063d23459, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 609d161d242e84b449b3baf35eb6a93a, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 29d22b4c211e6214daec2bc150051360, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 609d161d242e84b449b3baf35eb6a93a, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f57b1525c8dc6184985675fd32f53ae6, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 2
+  - _zoneNumber: 23
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d8ba2ad079c16414fa9b5750c5faf09a, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 9
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 321
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: af2704e0a3b97fd4692e3a929f63fa57, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 0dc79f3692f3f7849a4030322c1daa20, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 8
+  - _zoneNumber: 24
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4ae750ad633c34140aea079ca96cb97f, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 394
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: c8deacf9f17be1944a13da3063d23459, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 38
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d77c15ad25ae14a49ae33d949de5d1ae, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4d8d21265f85aa143b85d72f70e5acf8, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 7d8f10453546ea1499c2636c0eeba449, type: 3}
+      _count: 1
+  - _zoneNumber: 25
+    _zoneType: 1
+    _wheelSlices:
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 609d161d242e84b449b3baf35eb6a93a, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _count: 889
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 0dc79f3692f3f7849a4030322c1daa20, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 2f7c1b486c0088b4799c846319b266fa, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 29d22b4c211e6214daec2bc150051360, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d8ba2ad079c16414fa9b5750c5faf09a, type: 3}
+      _count: 1
+  - _zoneNumber: 26
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f57b1525c8dc6184985675fd32f53ae6, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: ad271ed63c6f2134881ebc18195d971a, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 29d22b4c211e6214daec2bc150051360, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f361a9c710c0e4e4f9d04ef6ea30bcd9, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 821c35546745a454c9ec5373aece6fca, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 89ad9f513caafbf41a7c5cf6d3bbf70c, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
+      _count: 3
+  - _zoneNumber: 27
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: c8deacf9f17be1944a13da3063d23459, type: 3}
+      _count: 4
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4d8d21265f85aa143b85d72f70e5acf8, type: 3}
+      _count: 2
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 609d161d242e84b449b3baf35eb6a93a, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 609d161d242e84b449b3baf35eb6a93a, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: b1d1b3b27723bf645852dbc64f39e0a5, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f361a9c710c0e4e4f9d04ef6ea30bcd9, type: 3}
+      _count: 4
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 7d8f10453546ea1499c2636c0eeba449, type: 3}
+      _count: 1
+  - _zoneNumber: 28
+    _zoneType: 0
+    _wheelSlices:
+    - _sliceType: 1
+      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
+      _count: 0
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: c8deacf9f17be1944a13da3063d23459, type: 3}
+      _count: 4
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: af2704e0a3b97fd4692e3a929f63fa57, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 4d8d21265f85aa143b85d72f70e5acf8, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d8ba2ad079c16414fa9b5750c5faf09a, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 0dc79f3692f3f7849a4030322c1daa20, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 0dc79f3692f3f7849a4030322c1daa20, type: 3}
+      _count: 3
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: d8ba2ad079c16414fa9b5750c5faf09a, type: 3}
+      _count: 1
   - _zoneNumber: 29
     _zoneType: 0
     _wheelSlices:
@@ -94,23 +850,50 @@ MonoBehaviour:
       _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
       _count: 0
     - _sliceType: 0
-      _iconSprite: {fileID: 21300000, guid: 5ff6de1087f36ad45b42b5e85d0077bc, type: 3}
-      _count: 1
-    - _sliceType: 0
-      _iconSprite: {fileID: 21300000, guid: 4d8d21265f85aa143b85d72f70e5acf8, type: 3}
-      _count: 2
-    - _sliceType: 0
-      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
+      _iconSprite: {fileID: 21300000, guid: c8deacf9f17be1944a13da3063d23459, type: 3}
       _count: 3
     - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: af2704e0a3b97fd4692e3a929f63fa57, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f361a9c710c0e4e4f9d04ef6ea30bcd9, type: 3}
+      _count: 1
+    - _sliceType: 0
       _iconSprite: {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
+      _count: 9
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 3658891ef732f314596199e5224b362d, type: 3}
       _count: 4
     - _sliceType: 0
-      _iconSprite: {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
-      _count: 5
+      _iconSprite: {fileID: 21300000, guid: f361a9c710c0e4e4f9d04ef6ea30bcd9, type: 3}
+      _count: 1
     - _sliceType: 0
-      _iconSprite: {fileID: 21300000, guid: af2704e0a3b97fd4692e3a929f63fa57, type: 3}
-      _count: 6
+      _iconSprite: {fileID: 21300000, guid: d8ba2ad079c16414fa9b5750c5faf09a, type: 3}
+      _count: 1
+  - _zoneNumber: 30
+    _zoneType: 2
+    _wheelSlices:
     - _sliceType: 0
-      _iconSprite: {fileID: 21300000, guid: 7d8f10453546ea1499c2636c0eeba449, type: 3}
-      _count: 7
+      _iconSprite: {fileID: 21300000, guid: f09a90a476379b04385064f48621a368, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 66013ec37be95da40bc62c540ecccc4a, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: 7d1d084050129a34f8d66173883a6ced, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: be58a4670c6a91f4d93cdc0e65dc09e7, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: f09a90a476379b04385064f48621a368, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: b93f50a1aa32dd2488e39c2ce46163a0, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: be58a4670c6a91f4d93cdc0e65dc09e7, type: 3}
+      _count: 1
+    - _sliceType: 0
+      _iconSprite: {fileID: 21300000, guid: be58a4670c6a91f4d93cdc0e65dc09e7, type: 3}
+      _count: 1
