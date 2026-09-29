@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,15 +22,15 @@ namespace WheelSpinGame
 
     public class WheelView : MonoBehaviour
     {
-        [SerializeField] private RectTransform _rectTransform;
+        [SerializeField] private RectTransform _wholeWheelRectTransform;
+        [SerializeField] private RectTransform _baseRectTransform;
         [Header("Wheel Visuals")]
         [SerializeField] private WheelVisuals _wheelVisuals;
         [SerializeField] private Image _spinBase;
         [SerializeField] private Image _spinIndicator;
         [SerializeField] private TMP_Text _spinTitle;
         [SerializeField] private TMP_Text _spinInfo;
-        [Header("Wheel Slices")]
-        [SerializeField] private CanvasGroup _sliceCanvasGroup;
+
         [SerializeField] private WheelSliceView[] _sliceViews;
         [Header("Wheel Spin Animation")]
         [SerializeField] private AnimationCurve wheelSpinCurve;
@@ -100,24 +101,25 @@ namespace WheelSpinGame
                 totalRotation += Random.Range(-maxRandomOffset, maxRandomOffset);
             }
 
-            return _rectTransform.DORotate(new Vector3(0, 0, totalRotation), totalDuration, RotateMode.FastBeyond360).SetEase(wheelSpinCurve); //.SetEase(Ease.InOutSine);
+            return _baseRectTransform.DORotate(new Vector3(0, 0, totalRotation), totalDuration, RotateMode.FastBeyond360).SetEase(wheelSpinCurve); //.SetEase(Ease.InOutSine);
         }
 
         public void ResetWheelRotation()
         {
-            _rectTransform.localRotation = Quaternion.identity;
+            _baseRectTransform.localRotation = Quaternion.identity;
         }
 
-        //public IEnumerator DisplayWheelCoroutine(WheelData wheelData)
-        //{
-        //    float canvasFadeDuration = .3f;
-        //    yield return _sliceCanvasGroup.DOFade(0.5f, canvasFadeDuration).SetEase(Ease.InExpo).WaitForCompletion();
-        //    DisplayWheelType(wheelData.ZoneType);
-        //    for (int i = 0; i < _sliceViews.Length; i++)
-        //    {
-        //        _sliceViews[i].SetData(wheelData.WheelSlices[i]);
-        //    }
-        //    yield return _sliceCanvasGroup.DOFade(1f, canvasFadeDuration).SetEase(Ease.OutExpo).WaitForCompletion();
-        //}
+        public IEnumerator DisplayWheelWithAnimation(WheelData wheelData)
+        {
+            float duration = .4f;
+            yield return _baseRectTransform.DOScale(0f, duration).SetEase(Ease.Flash).WaitForCompletion();
+            DisplayWheelType(wheelData.ZoneType);
+            for (int i = 0; i < _sliceViews.Length; i++)
+            {
+                _sliceViews[i].SetData(wheelData.WheelSlices[i]);
+            }
+            ResetWheelRotation();
+            yield return _baseRectTransform.DOScale(1f, duration).SetEase(Ease.Flash).WaitForCompletion();
+        }
     }
 }

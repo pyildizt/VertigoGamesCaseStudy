@@ -26,7 +26,7 @@ namespace WheelSpinGame
             _zoneManager = new ZoneManager(_wheelController.Wheels);
             _prizeManager = new PrizeManager();
 
-            _uiController.Initialize(this, _zoneManager.GetCurrWheel());
+            _uiController.Initialize(this, _zoneManager.GetCurrWheel(), _wheelGameConfig.NumberOfZones);
 
             _isProcessing = false;
         }
@@ -46,30 +46,35 @@ namespace WheelSpinGame
             _uiController.SetSpinButtonInteractable(false);
             _uiController.SetExitButtonInteractable(false);
 
+            // Spin wheel
             yield return _uiController.AnimateWheelSpin(sliceIndex);
 
             if (resultSlice.SliceType == SliceType.Reward)
             {
+                // Display reward and put in prize list
                 yield return _uiController.DisplayReward(resultSlice);
-                
-                // In between displaying reward and moving it, swiftly display the wheel for the next zone
-                _zoneManager.MoveToNextZone();
-                if (_zoneManager.CurrZoneNumber == _wheelGameConfig.NumberOfZones)
-                { 
-                    // TODO: END GAME!
-                    yield break;
-                }
-                _uiController.DisplayWheel(_zoneManager.GetCurrWheel());
-
                 yield return _uiController.MoveReward();
                 _prizeManager.AddPrize(resultSlice);
                 _uiController.DisplayPrizes(_prizeManager.Prizes);
+
+                // Move to next zone
+                _zoneManager.MoveToNextZone();
+                yield return _uiController.MoveToZone(_zoneManager.CurrZoneNumber);
+                if (_zoneManager.CurrZoneNumber == _wheelGameConfig.NumberOfZones)
+                {
+                    // TODO: END GAME!
+                    yield break;
+                }
+
+                // Display next wheel
+                yield return _uiController.DisplayWheelWithAnimation(_zoneManager.GetCurrWheel());
 
                 _uiController.SetSpinButtonInteractable(true);
                 _uiController.SetExitButtonInteractable(true);
             }
             else
             {
+                // If bomb, show death panel
                 _uiController.DisplayDeathPanel(true);
                 _uiController.SetExitButtonInteractable(false);
             }

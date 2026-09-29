@@ -11,6 +11,7 @@ namespace WheelSpinGame
         [SerializeField] private List<Sprite> _rewardSprites;
         [SerializeField] private List<RewardData> _rewardData;
         [SerializeField] private List<WheelData> _wheelOverrides;
+        [SerializeField] private List<WheelData> _generatedWheelPreview = new();
 
         public int NumberOfZones { get { return _numberOfZones; } }
         public Sprite BombSprite { get { return _bombSprite; } }
@@ -27,6 +28,14 @@ namespace WheelSpinGame
                     wheel.ValidateWheelSlices();
                 }
             }
+        }
+
+        public void GenerateWheelPreview()
+        {
+            WheelGenerator generator = new WheelGenerator(this);
+
+            _generatedWheelPreview.Clear();
+            _generatedWheelPreview.AddRange(generator.GenerateWheels());
         }
     }
 }

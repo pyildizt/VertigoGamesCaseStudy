@@ -15,6 +15,7 @@ namespace WheelSpinGame
         [SerializeField] private DeathView _deathView;
         [SerializeField] private PrizesView _prizesView;
         [SerializeField] private ExitView _exitView;
+        [SerializeField] private ZoneListView _zoneListView;
         [Header("Buttons")]
         [SerializeField] private Button _spinButton;
         [SerializeField] private Button _exitButton;
@@ -23,9 +24,10 @@ namespace WheelSpinGame
         [SerializeField] private Button _goBackButton;
         [SerializeField] private Button _collectRewardsButton;
 
-        public void Initialize(GameManager gameManager, WheelData wheelData)
+        public void Initialize(GameManager gameManager, WheelData wheelData, int numberOfZones)
         {
             _wheelView.DisplayWheel(wheelData);
+            _zoneListView.Initialize(numberOfZones);
 
             _spinButton.onClick.AddListener(gameManager.OnSpinButtonClicked);
             _exitButton.onClick.AddListener(gameManager.OnExitButtonClicked);
@@ -50,10 +52,20 @@ namespace WheelSpinGame
             _wheelView.DisplayWheel(wheelData);
         }
 
+        public IEnumerator DisplayWheelWithAnimation(WheelData wheelData)
+        {
+            yield return _wheelView.DisplayWheelWithAnimation(wheelData);
+        }
+
         public IEnumerator MoveReward()
         {
-            yield return _rewardView.MoveReward();
+            yield return _rewardView.MoveReward().WaitForCompletion();
             _rewardView.SetActive(false);
+        }
+
+        public IEnumerator MoveToZone(int zoneIndex)
+        {
+            yield return _zoneListView.MoveToZone(zoneIndex);
         }
 
         public void DisplayDeathPanel(bool val)

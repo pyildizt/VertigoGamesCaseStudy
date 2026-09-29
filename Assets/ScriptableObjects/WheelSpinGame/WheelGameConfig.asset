@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea691fc658fa8c48ac4ab0df64b5fa7, type: 3}
   m_Name: WheelGameConfig
   m_EditorClassIdentifier: 
-  _numberOfZones: 60
+  _numberOfZones: 30
   _bombSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
   _rewardSprites:
   - {fileID: 21300000, guid: 66073fca5784778419913fa2ced0512d, type: 3}
@@ -51,9 +51,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: aab70f851509d884e8ced3147908713a, type: 3}
   - {fileID: 21300000, guid: 12f444e1c50688d4ba35ebb92ba607c6, type: 3}
   _rewardData:
+  - {fileID: 11400000, guid: a643294378c925748ae853e78ad490ca, type: 2}
+  - {fileID: 11400000, guid: 7fa6af070c224b94bb818a2bbd7dc467, type: 2}
   - {fileID: 11400000, guid: c6e579b936afa3b42aa0276794b4c68b, type: 2}
   - {fileID: 11400000, guid: 4f9e17023589a2449ba4ec4828455aea, type: 2}
-  - {fileID: 11400000, guid: a643294378c925748ae853e78ad490ca, type: 2}
   - {fileID: 11400000, guid: 7e439954e114b474d87ddd7d556e02fd, type: 2}
   - {fileID: 11400000, guid: 9cc31231525f20047a082d5876f59f87, type: 2}
   - {fileID: 11400000, guid: 804984f40945d954ba36c27616c79a15, type: 2}
@@ -61,7 +62,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ad119a823ad5d344e9ce3d015a7c3ade, type: 2}
   - {fileID: 11400000, guid: e1801cd0b73cc4d4b9f8f2dfb72bfea2, type: 2}
   - {fileID: 11400000, guid: fce0d641bd33b304d93da7472dadd644, type: 2}
-  - {fileID: 11400000, guid: 7fa6af070c224b94bb818a2bbd7dc467, type: 2}
   - {fileID: 11400000, guid: 8920c307ee03318449913452f7c3f7fd, type: 2}
   - {fileID: 11400000, guid: 7c2256d18a95c754686b2f3f57f3da24, type: 2}
   - {fileID: 11400000, guid: 068fe077872823746af3ac8b79dc95b4, type: 2}
@@ -87,7 +87,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c5e64345f90cf284bbeb93f231c4804d, type: 2}
   - {fileID: 11400000, guid: ed2f7a9d13a189441999c911ad1f2172, type: 2}
   _wheelOverrides:
-  - _zoneNumber: 1
+  - _zoneNumber: 29
     _zoneType: 0
     _wheelSlices:
     - _sliceType: 1
@@ -114,30 +114,3 @@ MonoBehaviour:
     - _sliceType: 0
       _iconSprite: {fileID: 21300000, guid: 7d8f10453546ea1499c2636c0eeba449, type: 3}
       _count: 7
-  - _zoneNumber: 3
-    _zoneType: 0
-    _wheelSlices:
-    - _sliceType: 1
-      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
-      _count: 0
-    - _sliceType: 1
-      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
-      _count: 0
-    - _sliceType: 1
-      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
-      _count: 0
-    - _sliceType: 1
-      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
-      _count: 0
-    - _sliceType: 1
-      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
-      _count: 0
-    - _sliceType: 1
-      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
-      _count: 0
-    - _sliceType: 1
-      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
-      _count: 0
-    - _sliceType: 1
-      _iconSprite: {fileID: 21300000, guid: 2a6e80cc485286a4889cc47079898e87, type: 3}
-      _count: 0

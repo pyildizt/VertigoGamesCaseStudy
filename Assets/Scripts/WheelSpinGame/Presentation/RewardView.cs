@@ -28,13 +28,13 @@ namespace WheelSpinGame
             _countText.text = 'x' + sliceData.Count.ToString();
 
             // Make reward pop out in the middle of panel
-            float popDuration = 0.6f;
+            float popDuration = 0.5f;
             Sequence popSequence = DOTween.Sequence();
             popSequence.Append(_rewardRootTransform.DOScale(Vector3.one, popDuration).SetEase(Ease.InOutBack));
 
             // Spin star flash in the back
             Vector3 rotateTo = _effectRectTransform.localEulerAngles + new Vector3(0, 0, 15f);
-            popSequence.Join(_effectRectTransform.DORotate(rotateTo, 3f, RotateMode.FastBeyond360));
+            popSequence.Join(_effectRectTransform.DORotate(rotateTo, 2f, RotateMode.FastBeyond360));
             return popSequence;
         }
 
