@@ -1,6 +1,3 @@
-using DG.Tweening;
-using System.Collections;
-using TMPro;
 using UnityEngine;
 
 namespace WheelSpinGame
@@ -14,10 +11,9 @@ namespace WheelSpinGame
             _deathRootTransform.gameObject.SetActive(false);
         }
 
-        public void DisplayDeathPanel()
+        public void DisplayDeathPanel(bool val)
         {
-            _deathRootTransform.gameObject.SetActive(true);
+            _deathRootTransform.gameObject.SetActive(val);
         }
-
     }
 }

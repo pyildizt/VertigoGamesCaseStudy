@@ -1,4 +1,3 @@
-using DG.Tweening;
 using System.Collections;
 using UnityEngine;
 namespace WheelSpinGame
@@ -11,8 +10,10 @@ namespace WheelSpinGame
         private ZoneManager _zoneManager;
         private PrizeManager _prizeManager;
         private WheelController _wheelController;
+        private bool _isProcessing;
 
-        private bool _isWheelSpinning;
+        public PrizeManager PrizeManager => _prizeManager;
+        public WheelController WheelController => _wheelController;
 
         private void Awake()
         {
@@ -27,7 +28,7 @@ namespace WheelSpinGame
 
             _uiController.Initialize(this, _zoneManager.GetCurrWheel());
 
-            _isWheelSpinning = false;
+            _isProcessing = false;
         }
 
         public void OnSpinButtonClicked()
@@ -40,8 +41,10 @@ namespace WheelSpinGame
 
         private IEnumerator HandleSpinCoroutine(WheelSliceData resultSlice, int sliceIndex)
         {
-            _isWheelSpinning = true;
+            _isProcessing = true;
+
             _uiController.SetSpinButtonInteractable(false);
+            _uiController.SetExitButtonInteractable(false);
 
             yield return _uiController.AnimateWheelSpin(sliceIndex);
 
@@ -59,13 +62,57 @@ namespace WheelSpinGame
                 _uiController.DisplayWheel(_zoneManager.GetCurrWheel());
 
                 yield return _uiController.MoveReward();
-                _uiController.PutRewardInPrizes(resultSlice);
+                _prizeManager.AddPrize(resultSlice);
+                _uiController.DisplayPrizes(_prizeManager.Prizes);
+
+                _uiController.SetSpinButtonInteractable(true);
+                _uiController.SetExitButtonInteractable(true);
             }
             else
             {
-                _uiController.DisplayDeathPanel();
+                _uiController.DisplayDeathPanel(true);
+                _uiController.SetExitButtonInteractable(false);
             }
-            _uiController.SetSpinButtonInteractable(true);
         }
+
+        public void OnExitButtonClicked()
+        {
+            _uiController.DisplayExitPanel(true);
+        }
+
+        public void OnGiveUpButtonClicked()
+        {
+            _prizeManager.ClearPrizes();
+            _uiController.ClearPrizes();
+
+            _zoneManager.Reset();
+            _uiController.DisplayWheel(_zoneManager.GetCurrWheel());
+            _uiController.DisplayDeathPanel(false);
+
+            _uiController.SetSpinButtonInteractable(true);
+            _uiController.SetExitButtonInteractable(true);
+        }
+
+        public void OnReviveButtonClicked()
+        {
+            _uiController.DisplayWheel(_zoneManager.GetCurrWheel());
+            _uiController.DisplayDeathPanel(false);
+
+            _uiController.SetSpinButtonInteractable(true);
+            _uiController.SetExitButtonInteractable(true);
+        }
+
+        public void OnGoBackButtonClicked()
+        {
+            _uiController.DisplayExitPanel(false);
+        }
+
+        public void OnCollectRewardsButtonClicked()
+        {
+            _uiController.DisplayExitPanel(false);
+            //TODO:
+            Debug.Log("need code for collect rewards");
+        }
+
     }
 }

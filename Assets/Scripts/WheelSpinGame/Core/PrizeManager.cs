@@ -1,23 +1,48 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace WheelSpinGame
 {
+    public class PrizeData
+    {
+        public Sprite IconSprite { get; }
+        public int Count { get; private set; }
+
+        public PrizeData(Sprite iconSprite, int count)
+        {
+            IconSprite = iconSprite;
+            Count = count;
+        }
+
+        public void AddCount(int count)
+        {
+            Count += count;
+        }
+    }
+
     public class PrizeManager
     {
-        private List<WheelSliceData> _prizes;
-        public List<WheelSliceData> Prizes {  get { return _prizes; } }
+        private readonly List<PrizeData> _prizes;
+        public List<PrizeData> Prizes { get { return _prizes; } }
 
         public PrizeManager()
         {
-            _prizes = new List<WheelSliceData>();
+            _prizes = new List<PrizeData>();
         }
 
-        public void AddPrize(WheelSliceData prize)
+        public void AddPrize(WheelSliceData wheelSlice)
         {
-            if (prize != null)
+            if (wheelSlice == null)
+                return;
+
+            PrizeData existingPrize = _prizes.Find(prize => prize.IconSprite == wheelSlice.IconSprite);
+            if (existingPrize != null)
             {
-                _prizes.Add(prize);
+                existingPrize.AddCount(wheelSlice.Count);
+                return;
             }
+
+            _prizes.Add(new PrizeData(wheelSlice.IconSprite, wheelSlice.Count));
         }
 
         public void ClearPrizes()

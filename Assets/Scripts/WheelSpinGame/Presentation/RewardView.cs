@@ -34,7 +34,7 @@ namespace WheelSpinGame
 
             // Spin star flash in the back
             Vector3 rotateTo = _effectRectTransform.localEulerAngles + new Vector3(0, 0, 15f);
-            popSequence.Join(_effectRectTransform.DORotate(rotateTo, 5f, RotateMode.FastBeyond360));
+            popSequence.Join(_effectRectTransform.DORotate(rotateTo, 3f, RotateMode.FastBeyond360));
             return popSequence;
         }
 
