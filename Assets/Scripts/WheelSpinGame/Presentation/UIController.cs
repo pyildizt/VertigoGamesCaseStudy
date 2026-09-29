@@ -40,6 +40,44 @@ namespace WheelSpinGame
             _playAgainButton.onClick.AddListener(gameManager.OnPlayAgainButtonClicked);
         }
 
+        private void OnValidate()
+        {
+            Button[] buttons = GetComponentsInChildren<Button>(true);
+            foreach (Button button in buttons)
+            {
+                switch (button.name)
+                {
+                    case "ui_button_spin":
+                        _spinButton = button;
+                        break;
+
+                    case "ui_button_exit":
+                        _exitButton = button;
+                        break;
+
+                    case "ui_button_give_up":
+                        _giveUpButton = button;
+                        break;
+
+                    case "ui_button_revive":
+                        _reviveButton = button;
+                        break;
+
+                    case "ui_button_go_back":
+                        _goBackButton = button;
+                        break;
+
+                    case "ui_button_collect_rewards":
+                        _collectRewardsButton = button;
+                        break;
+
+                    case "ui_button_play_again":
+                        _playAgainButton = button;
+                        break;
+                }
+            }
+        }
+
         public IEnumerator AnimateWheelSpin(int sliceIndex)
         {
             yield return _wheelView.AnimateWheelSpin(sliceIndex).WaitForCompletion();
@@ -99,6 +137,11 @@ namespace WheelSpinGame
         public void ClearPrizes()
         {
             _prizesView.ClearPrizes();
+        }
+
+        public void ResetZoneList(int numberOfZones)
+        {
+            _zoneListView.Initialize(numberOfZones);
         }
 
         public void SetSpinButtonInteractable(bool val)

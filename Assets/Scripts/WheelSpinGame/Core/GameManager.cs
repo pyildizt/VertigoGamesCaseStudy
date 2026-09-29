@@ -51,13 +51,13 @@ namespace WheelSpinGame
 
                 // Move to next zone
                 _zoneManager.MoveToNextZone();
-                yield return _uiController.MoveToZone(_zoneManager.CurrZoneNumber);
-                if (_zoneManager.CurrZoneNumber >= _wheelGameConfig.NumberOfZones)
+                if (_zoneManager.CurrZoneNumber > _wheelGameConfig.NumberOfZones)
                 {
                     // Show collected rewards and end game
                     OnCollectRewardsButtonClicked();
                     yield break;
                 }
+                yield return _uiController.MoveToZone(_zoneManager.CurrZoneNumber);
 
                 // Display next wheel
                 yield return _uiController.DisplayWheelWithAnimation(_zoneManager.GetCurrWheel());
@@ -85,6 +85,8 @@ namespace WheelSpinGame
 
             _zoneManager.Reset();
             _uiController.DisplayWheel(_zoneManager.GetCurrWheel());
+            _uiController.ResetZoneList(_wheelGameConfig.NumberOfZones);
+
             _uiController.DisplayDeathPanel(false);
 
             _uiController.SetSpinButtonInteractable(true);

@@ -22,14 +22,12 @@ namespace WheelSpinGame
         [SerializeField] private ZoneView _zonePrefab;
         [SerializeField] private ZoneVisuals _zoneVisuals;
 
-        private List<ZoneView> _zoneViews;
+        private List<ZoneView> _zoneViews = new List<ZoneView>();
         private float _zoneStep;
         private int _currentZoneIndex;
 
         public void Initialize(int numberOfZones)
         {
-            _zoneViews = new List<ZoneView>();
-
             ClearZones();
 
             float zoneSpacing = 50f;
@@ -69,11 +67,12 @@ namespace WheelSpinGame
                 zoneRectTransform.anchoredPosition = new Vector2((zoneNumber - 1) * _zoneStep, 0f);
             }
             _viewport.anchoredPosition = Vector2.zero;
+            _zoneList.anchoredPosition = Vector2.zero;
         }
 
         public IEnumerator MoveToZone(int zoneIndex)
         {
-            if (zoneIndex >= _zoneViews.Count)
+            if (zoneIndex > _zoneViews.Count)
             {
                 yield break;
             }
@@ -107,7 +106,7 @@ namespace WheelSpinGame
             float normalZoneScale = 1f;
             float currZoneScale = 1.15f;
 
-            for (int zoneNumber = 1; zoneNumber < _zoneViews.Count - 1; zoneNumber++)
+            for (int zoneNumber = 1; zoneNumber < _zoneViews.Count + 1; zoneNumber++)
             {
                 if (_currentZoneIndex == zoneNumber)
                 {

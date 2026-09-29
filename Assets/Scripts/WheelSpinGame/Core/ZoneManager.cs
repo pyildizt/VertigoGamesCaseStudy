@@ -15,7 +15,7 @@ namespace WheelSpinGame
 
         public void MoveToNextZone()
         {
-            if (CurrZoneNumber < _wheels.Count)
+            if (CurrZoneNumber <= _wheels.Count)
             {
                 CurrZoneNumber++;
             }
